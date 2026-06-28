@@ -12,6 +12,7 @@ body {
     background:#090909;
     color:#fff;
     overflow:hidden;
+    
     background-image: url("https://media.istockphoto.com/id/2162705403/vector/bright-vector-background-of-northern-lights-over-the-mountains.jpg?s=612x612&w=0&k=20&c=7_TpqfniWS388kUdHA81DPANxVyfVaIMbiLp3lxHN7g=");
     background-size: cover;
   
@@ -45,12 +46,16 @@ label input{
 }
 label{
     display: flex;
+    
 }
-label p{
+label a{
     margin-left: 0.3rem;
     margin-right: 0.3rem;
     color:#0d0123;
+    font-weight: 600
+
 }
+ 
 .left {
     display:flex;
     flex-direction:column;
@@ -132,18 +137,136 @@ a {
     color:white;
     text-decoration:none
 }
-@media(max-width:768px){
- .card {
-    flex-direction:column
-}
-.left {
-     text-align:center;
-     padding:1.9rem;
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width:768px){
+
+    body{
+        padding:1.25rem;
+        overflow-y:auto;
+        align-items:flex-start;
     }
-.left h1 {
-    font-size:2.2rem
+
+    .card{
+        flex-direction:column;
+        width:100%;
+        max-width:26.25rem;
+        border-radius:1.12rem;
+        margin:1.56rem 0;
+    }
+
+    .left{
+        padding:1.87rem 1.25rem;
+        text-align:center;
+    }
+
+    .left h1{
+        font-size:2rem;
+    }
+
+    .left h2{
+        font-size:1.2rem;
+        margin-top:0.5rem;
+    }
+    label input{
+        z-index: 2;
+        transform :translate(-8.5rem,1rem);
+        
+    }
+    label span{
+        margin-left: 1.8rem;
+    }
+
+    .left p{
+        font-size:1rem;
+        margin-top:0.5rem;
+    }
+
+    .right{
+        padding:1.56rem 1.25rem;
+    }
+
+    .right h2{
+        text-align:center;
+        font-size:1.5rem;
+        margin-bottom:1.25rem;
+    }
+
+    form{
+        gap:0.93rem;
+    }
+
+    input,
+    button{
+        width:100%;
+        font-size:1rem;
+        padding:0.93rem;
+    }
+
+    button img{
+        width:1.5rem;
+        height:1.5rem;
+    }
+
+    label{
+        font-size:0.87rem;
+        flex-wrap:wrap;
+        line-height:1.5;
+    }
+
+    form>p{
+        text-align:center;
+    }
 }
-.right {
-    padding:1.6rem;
-}
+
+/* Extra Small Phones */
+
+@media (max-width:480px){
+
+    body{
+        padding:0.75rem;
+    }
+
+    .card{
+        max-width:100%;
+    }
+
+    .left{
+        padding:1.56rem 0.93rem;
+    }
+
+    .right{
+        padding:1.25rem 0.93rem;
+    }
+
+    .left h1{
+        font-size:1.7rem;
+    }
+
+    .left h2{
+        font-size:1rem;
+    }
+
+    .left p{
+        font-size:.9rem;
+    }
+
+    .right h2{
+        font-size:1.3rem;
+    }
+
+    input,
+    button{
+        padding:0.87rem;
+        font-size:0.93rem;
+    }
+
+    button img{
+        width:1.37rem;
+        height:1.37rem;
+    }
+
+    label{
+        font-size:0.81rem;
+    }
 }
