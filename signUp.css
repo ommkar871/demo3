@@ -168,14 +168,7 @@ a {
         font-size:1.2rem;
         margin-top:0.5rem;
     }
-    label input{
-        z-index: 2;
-        transform :translate(-8.5rem,1rem);
-        
-    }
-    label span{
-        margin-left: 1.8rem;
-    }
+   
 
     .left p{
         font-size:1rem;
@@ -210,8 +203,12 @@ a {
 
     label{
         font-size:0.87rem;
-        flex-wrap:wrap;
-        line-height:1.5;
+        flex-wrap:nowrap;
+        /* line-height:1.5; */
+    }
+    label input{
+        height:1rem;
+        width:1rem
     }
 
     form>p{
